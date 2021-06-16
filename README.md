@@ -3,10 +3,25 @@ Basic Tracking Requirements Extension
 
 This Adobe Launch private Extension provides several tracking features, based on standard tracking approaches.
 
+# Release Notes
+## v2.0.2
+- Added Error Handling for QueryString Log, if QueryString is empty
+- Added DataLayer Push to GET Condition
+## v2.0.1
+- Fixed Data Element *CSS Standard - Event Target Path*
+## v2.0.0
+- Published Features to Private
+## v1.0.0
+- Initial Features deployed on DEV
 
 # Features
 
-This Extension provides Actions, Conditions, Data Elements and some helper. 
+This Extension provides Actions, Conditions, Data Elements and some Helper. 
+
+## Extension Config
+- Add the current application name provided by the digital analytics team.
+- Check if log should be provided in the browser console
+- Check if events should be pushed into digitalData.event
 
 ## Actions
 ### PII Checker
@@ -27,11 +42,22 @@ Add the PiiChecker Action in every Pageload Rule (load first). Add the current U
 Use the newly generated Data Elements to assign them to Adobe/Google Analytics.
 
 ### Set Version Object
+#### Description:
+This Action provides a console log (only in DEV/INT/VPR) with the current version and application. It also sets the environment variable, if it's test or live environment, based on the provided domain.
+#### Usage:
+Add this Action to a Rule and add the current live domain. If there are multiple language based domains, you can also provide a data element.
 
 ## Conditions
 ### Global Event Tracker
-### Standard Event Tracker
+#### Description:
+This Condition checks if a tracking link is tagged with data attributes. If it is tagged correctly it checks the URL if it fits in the defined format and then creates basic event tracking variables based on the data attributes.
+#### Usage:
+Create an event tracking rules which listens (mousedown or click) on [data-event-category]. Add the Global Event Tracker as Condition and add analytics actions (e.g. Set Variables from Adobe Analytics)
 
+### Standard Event Tracker
+#### Description:
+This Condition checks if
+#### Usage:
 ## Data Elements
 
 
