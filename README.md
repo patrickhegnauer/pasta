@@ -48,6 +48,18 @@ Create an event tracking rules which listens (mousedown or click) on [data-event
 This Condition checks if
 #### Usage:
 ## Data Elements
+| Data Element  | Value |
+| ------------- | ------------- |
+| CSS Standard - Application  | Returns Application Name from Extension Config  |
+| CSS Standard - Launch Environment | Returns satellite.buildInfo.environment  |
+| CSS Standard - Timestamp  | Returns Timestamp in format: yyyy-mm-dd hh:mm:ss  |
+| CSS Standard - Event Category  | Returns Event Category from Standard Event Object  |
+| CSS Standard - Event Action  | Returns Event Action from Standard Event Object  |
+| CSS Standard - Event Label  | Returns Event Label from Standard Event Object  |
+| CSS Standard - Event Target Hostname  | Returns Event Target Hostname from Slashed Event Object  |
+| CSS Standard - Event Target URL Path  | Returns Event Target URL Path from Slashed Event Object  |
+| CSS Standard - Event Target URL  | Returns Event Target URL from Slashed Event Object |
+| CSS Standard - Event Target QueryString  | Returns Event Target QueryString from Slashed Event Object  |
 
 
 ## Helpers
