@@ -1,0 +1,180 @@
+{
+  "displayName": "CSS Standard Tracking",
+  "iconPath": "src/resources/icons/pasta_2_0.svg",
+  "name": "css-standard-event-tracking",
+  "platform": "web",
+  "version": "2.0.2",
+  "description": "Track events based on the CSS Versicherung Standard. This extension will provide event tracking features as well as frequently used data elements.",
+  "author": {
+    "name": "Patrick Hegnauer"
+  },
+  "viewBasePath": "src/view/",
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {}
+    }
+  },
+  "conditions": [
+    {
+      "displayName": "Standard Event Tracking",
+      "name": "standard-event-tracking",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/conditions/standardEventTracking.js"
+    },
+    {
+      "displayName": "Global Event Tracker",
+      "name": "global-event-tracker",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/conditions/globalEventTracker.js"
+    }
+  ],
+  "dataElements": [
+    {
+      "displayName": "CSS Standard - Event Category",
+      "name": "event-category",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/eventCategory.js"
+    },
+    {
+      "displayName": "CSS Standard - Event Action",
+      "name": "event-action",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/eventAction.js"
+    },
+    {
+      "displayName": "CSS Standard - Event Label",
+      "name": "event-label",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/eventLabel.js"
+    },
+    {
+      "displayName": "CSS Standard - Event Target Hostname",
+      "name": "event-target-hostname",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/eventTargetHostname.js"
+    },
+    {
+      "displayName": "CSS Standard - Event Target URL",
+      "name": "event-target-url",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/eventTargetUrl.js"
+    },
+    {
+      "displayName": "CSS Standard - Event Target Path",
+      "name": "event-target-path",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/eventTargetPath.js"
+    },
+    {
+      "displayName": "CSS Standard - Event Target QueryString",
+      "name": "event-target-querystring",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/eventTargetQuerystring.js"
+    },
+    {
+      "displayName": "CSS Standard - Timestamp",
+      "name": "css-standard-timestamp",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/cssStandardTimestamp.js"
+    },
+    {
+      "displayName": "CSS Standard - Launch Environment",
+      "name": "css-standard-launch-environment",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/cssStandardLaunchEnvironment.js"
+    },
+    {
+      "displayName": "CSS Standard - Application",
+      "name": "css-standard-application",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/cssStandardApplication.js"
+    },
+    {
+      "displayName": "Floodlight Event Template (deprecated)",
+      "name": "floodlight-event-template",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/floodlightEventTemplate.js",
+      "viewPath": "dataElements/floodlightEventTemplate.html"
+    }
+  ],
+  "actions": [
+    {
+      "displayName": "Set Version Object",
+      "name": "set-version-object",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/setVersionObject.js",
+      "viewPath": "actions/setVersionObject.html"
+    },
+   
+       {
+      "displayName": "PII Checker",
+      "name": "pii-checker",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/piiChecker.js",
+      "viewPath": "actions/piiChecker.html"
+    }
+  ]
+}

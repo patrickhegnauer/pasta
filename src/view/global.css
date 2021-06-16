@@ -1,0 +1,28 @@
+body {
+    padding: 12px;
+  }
+  
+label {
+    line-height: 36px;
+    margin-right: 8px;
+    font: bold 12px sans-serif;
+    display: inline-block;
+    text-align: right;
+    width: 140px;
+  }
+
+  .css_fields{
+     margin:5px !important;
+  }
+
+  .css_fields::placeholder{
+    color:grey!important;
+ }
+
+  .grid_system{
+    margin-left:20px;
+  }
+
+  .invalid{
+    border: 1px solid red!important;
+  }
