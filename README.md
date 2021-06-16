@@ -45,8 +45,10 @@ Create an event tracking rules which listens (mousedown or click) on [data-event
 
 ### Standard Event Tracker
 #### Description:
-This Condition checks if
+This Condition checks if an Anchor Element was clicked. It also checkes if the element is already tagged with data attributes. If it is already tagged, it will skip proccessing. Otherwise if the extension is configured for specific link tracking events (e.g. Downloads). This Condition will check the link and provide Event Variables for the specific link. 
 #### Usage:
+Create an event tracking rules which listens (mousedown or click) on a, button elements. Add the condition and add some Actions (e.g. Set Variables from Adobe). 
+
 ## Data Elements
 | Data Element  | Value |
 | ------------- | ------------- |
@@ -64,4 +66,22 @@ This Condition checks if
 
 ## Helpers
 ### TrackingHelper
+This helper-class provides following functions:
+
+| Function  | Description |
+| ------------- | ------------- |
+| console()  | Logs into browser console  |
+| isEmailLink(url)  | Checks if the provided url is a Email Link  |
+| isPhoneLink(url)  | Checks if the provided url is a Phone Link  |
+| isDownloadLink(url)  | Checks if the provided url is a Download Link. Supported are avi,css,csv,doc,docx,eps,exe,feed,gif,ics,jpg,js,m4v,mov,mp3,pdf,png,ppt,pptx,rar,tab,txt,vsd,vxd,wav,wma,wmv,xls,xlsx,xml,zip  |
+| isSocialLink(url)  | Checks if the provided url is a Social Link. Supported are Facebook, Instagram, Twitter, YouTube  |
+| findParentNode(node)  | Checks if the parent Node is containing an anchor element  |
+| URLslasher(type, url)  | Slashes the provided URL into target pieces  |
+| URLconstructor(url)  | Checks if the provided URL is formatted correctly  |
+| dataLayerPush(scope)  | Pushes information into DataLayer Event Object  |
+| piiChecker(url,queryString)  | Checks if URL and QueryString containing PII Data |
+
 ### DataLayerHelper
+| Function  | Description |
+| ------------- | ------------- |
+| setDataLayer(application)  | Logs the version and timestamp to the browser console. Provides the version Object in the Data Layer  |
