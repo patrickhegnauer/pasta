@@ -1,7 +1,10 @@
 # PASTA (Patrick's Amazing Standard Tracking Approach)
+
 Basic Tracking Requirements Extension
 
 This Adobe Launch private Extension provides several tracking features, based on standard tracking approaches.
+
+![alt pasta](https://github.com/patrickhegnauer/pasta/blob/master/src/resources/icons/pasta_2_0.svg?raw=true)
 
 # Features
 
