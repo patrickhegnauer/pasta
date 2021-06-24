@@ -43,12 +43,17 @@ Add this Action to a Rule and add the current live domain. If there are multiple
 ### Global Event Tracker
 #### Description:
 This Condition checks if a tracking link is tagged with data attributes. If it is tagged correctly it checks the URL if it fits in the defined format and then creates basic event tracking variables based on the data attributes.
+Following DOM Objects are available:
+- window.standardEventVarsObject
+- window.slashedURLObject
 #### Usage:
 Create an event tracking rules which listens (mousedown or click) on [data-event-category]. Add the Global Event Tracker as Condition and add analytics actions (e.g. Set Variables from Adobe Analytics)
 
 ### Standard Event Tracker
 #### Description:
-This Condition checks if an Anchor Element was clicked. It also checkes if the element is already tagged with data attributes. If it is already tagged, it will skip proccessing. Otherwise if the extension is configured for specific link tracking events (e.g. Downloads). This Condition will check the link and provide Event Variables for the specific link. 
+This Condition checks if an Anchor Element was clicked. It also checkes if the element is already tagged with data attributes. If it is already tagged, it will skip proccessing. Otherwise if the extension is configured for specific link tracking events (e.g. Downloads). This Condition will check the link and provide Event Variables for the specific link. Following DOM Objects are available:
+- window.standardEventVarsObject
+- window.slashedURLObject
 #### Usage:
 Create an event tracking rules which listens (mousedown or click) on a, button elements. Add the condition and add some Actions (e.g. Set Variables from Adobe). 
 
