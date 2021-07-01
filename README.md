@@ -88,6 +88,7 @@ This helper-class provides following functions:
 | URLconstructor(url)  | Checks if the provided URL is formatted correctly  |
 | dataLayerPush(scope)  | Pushes information into DataLayer Event Object  |
 | piiChecker(url,queryString)  | Checks if URL and QueryString containing PII Data |
+| TrackingHelper.addToLocalStorageArray(name,value) | Adds new values to existing localStorage Parameter |
 
 ### DataLayerHelper
 | Function  | Description |
