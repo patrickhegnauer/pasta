@@ -72,7 +72,7 @@ module.exports = {
       "modulePath": "css-standard-event-tracking/src/lib/actions/piiChecker.js",
       "settings": {
         "url": "www.css.ch?mail=me@bluewin.ch",
-        "queryString": "?mail=me@bluewin.ch"
+        "queryString": "mail=me@bluewin.ch"
       }
     }]
   }, {
@@ -114,8 +114,8 @@ module.exports = {
   },
   "buildInfo": {
     "turbineVersion": "26.0.2",
-    "turbineBuildDate": "2021-05-21T12:46:27.604Z",
-    "buildDate": "2021-05-21T12:46:27.604Z",
+    "turbineBuildDate": "2021-07-01T11:44:08.892Z",
+    "buildDate": "2021-07-01T11:44:08.892Z",
     "environment": "development"
   }
 }

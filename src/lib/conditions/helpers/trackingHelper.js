@@ -286,12 +286,31 @@ TrackingHelper.piiChecker = function(url,queryString){
   _satellite.setVar('URL corrected',Object.values(dimensions)[0]);    
   _satellite.setVar('QueryString corrected',Object.values(dimensions)[1]);  
 
-  TrackingHelper.console(Object.values(dimensions)[0])
-  if(Object.values(dimensions)[1] !== ""){
-  TrackingHelper.console(Object.values(dimensions)[1])
-  }
-	}
+  if(Object.values(dimensions)[0].indexOf('[PII DATA]')>-1)
+  TrackingHelper.console(
+	'[TrackingHelper.piiChecker] URL converted, as it contains PII DATA: ' +  
+	queryString)
+    	}
+		TrackingHelper.console('===================>[PASTA] PII Checker ended')
   };
+
+  TrackingHelper.addToLocalStorageArray = function (name, value) 
+ {
+	// Get the existing data
+	var existing = localStorage.getItem(name);
+
+	// If no existing data, create an array
+	// Otherwise, convert the localStorage string to an array
+	existing = existing ? existing.split(',') : [];
+
+	// Add new data to localStorage Array
+	existing.push(value);
+
+	// Save back to localStorage
+	localStorage.setItem(name, existing.toString());
+};
+
+  
 
 }
 catch(e){

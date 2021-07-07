@@ -3,8 +3,8 @@
   "iconPath": "src/resources/icons/pasta_2_0.svg",
   "name": "css-standard-event-tracking",
   "platform": "web",
-  "version": "2.0.2",
-  "description": "Track events based on the CSS Versicherung Standard. This extension will provide event tracking features as well as frequently used data elements.",
+  "version": "2.0.3",
+  "description": "Track events based on the CSS Versicherung Standard. This extension will provide event tracking features as well as frequently used data elements. Documentation: https://github.com/patrickhegnauer/pasta",
   "author": {
     "name": "Patrick Hegnauer"
   },
@@ -164,8 +164,7 @@
       "libPath": "src/lib/actions/setVersionObject.js",
       "viewPath": "actions/setVersionObject.html"
     },
-   
-       {
+    {
       "displayName": "PII Checker",
       "name": "pii-checker",
       "schema": {
@@ -175,6 +174,12 @@
       },
       "libPath": "src/lib/actions/piiChecker.js",
       "viewPath": "actions/piiChecker.html"
+    }
+  ],
+  "sharedModules": [
+    {
+      "name": "helper",
+      "libPath": "src/lib/sharedModules/helper.js"
     }
   ]
 }
