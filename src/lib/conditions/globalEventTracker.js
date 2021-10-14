@@ -12,6 +12,7 @@ module.exports = function(settings,event) {
     //check if href is defined
       TrackingHelper.console("===================>[PASTA - GET] START");
       TrackingHelper.console("[PASTA - GET] event call detected");
+      var dataElement = settings.excludeAction;
       if(event.element){
     if(event.element.href != undefined){
         //check if url is valid
@@ -24,6 +25,17 @@ module.exports = function(settings,event) {
         var category = event.element.getAttribute("data-event-category")
         var action = event.element.getAttribute("data-event-action")
         var label = event.element.getAttribute("data-event-label")
+
+      //new as of 2.0.5
+      for (var i = 0; i < dataElement.length; i++) {
+        if(action.indexOf(dataElement[i]) == 0){
+          TrackingHelper.console("===================>[PASTA - GET] Exclude Flag set with values: " + action);
+          TrackingHelper.console("===================>[PASTA - GET] END");
+          return false
+        }
+     }
+      
+
 
       //Return final vars in object
 		  window.standardEventVarsObject = {

@@ -8,9 +8,9 @@ try{
 TrackingHelper.console = function(text){
 
   if(typeof window.console !== "undefined"){
-    if(typeof window.console.log !== "undefined" && _satellite.buildInfo.environment !== "production" && extensionSettings.debugMode){
+    //if(typeof window.console.log !== "undefined" && _satellite.environment.stage !== "production" && extensionSettings.debugMode){
       window.console.log(text);
-    }
+    //}
   }
 }
 

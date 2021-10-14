@@ -14,7 +14,7 @@ try{
         
         TrackingHelper.console('===================>[Launch Build]: '+ time);
         TrackingHelper.console('===================>[Applikation]: ' + application); 
-        TrackingHelper.console('===================>[Environment]: ' + _satellite.buildInfo.environment);
+        TrackingHelper.console('===================>[Environment]: ' + _satellite.environment.stage);
      
         //set version object
         digitalData.version = {
@@ -23,7 +23,7 @@ try{
             appmeasurement: "2.17.0",                                       //reference to appmeasurement version
             launch: _satellite.buildInfo.turbineVersion,                     //reference to launch version
             buildInfo: _satellite.buildInfo,                                //reference to buildVersion
-            environment : _satellite.buildInfo.environment
+            environment : _satellite.environment.stage
           }
     }
         

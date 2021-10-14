@@ -43,6 +43,15 @@ module.exports = {
       "forceLowerCase": true,
       "modulePath": "css-standard-event-tracking/src/lib/dataElements/cssStandardTimestamp.js",
       "storageDuration": "pageview"
+    },
+    "Exclude Events": {
+      "settings": {
+        "path": "navigator.languages"
+      },
+      "cleanText": false,
+      "forceLowerCase": false,
+      "modulePath": "sandbox/javascriptVariable.js",
+      "storageDuration": ""
     }
   },
   "rules": [{
@@ -84,7 +93,9 @@ module.exports = {
     }],
     "conditions": [{
       "modulePath": "css-standard-event-tracking/src/lib/conditions/globalEventTracker.js",
-      "settings": {}
+      "settings": {
+        "excludeAction": "%Exclude Events%"
+      }
     }]
   }, {
     "id": "RL1621601166486",
@@ -113,9 +124,9 @@ module.exports = {
     "orgId": "ABCDEFGHIJKLMNOPQRSTUVWX@AdobeOrg"
   },
   "buildInfo": {
-    "turbineVersion": "26.0.2",
-    "turbineBuildDate": "2021-07-01T11:44:08.892Z",
-    "buildDate": "2021-07-01T11:44:08.892Z",
+    "turbineVersion": "27.2.0",
+    "turbineBuildDate": "2021-10-14T10:03:01.082Z",
+    "buildDate": "2021-10-14T10:03:01.082Z",
     "environment": "development"
   }
 }

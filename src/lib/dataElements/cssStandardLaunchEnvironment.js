@@ -2,5 +2,5 @@
 var window = require('@adobe/reactor-window');  
 
 module.exports = function(settings) {
-  return _satellite.buildInfo.environment
+  return _satellite.environment.stage
 };
