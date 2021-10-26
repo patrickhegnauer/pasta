@@ -42,7 +42,7 @@ Add this Action to a Rule and add the current live domain. If there are multiple
 ## Conditions
 ### Global Event Tracker
 #### Description:
-This Condition checks if a tracking link is tagged with data attributes. If it is tagged correctly it checks the URL if it fits in the defined format and then creates basic event tracking variables based on the data attributes.
+This Condition checks if a tracking link is tagged with data attributes. If it is tagged correctly it checks the URL if it fits in the defined format and then creates basic event tracking variables based on the data attributes. Per Version 2.0.5 you can add a data element to exclude already tagged Events. So there is no need to remove the code by a developer. The corresponding data element should return an array [''] (empty per default). And then simply add Event Names to it, based on the Event Action, e.g. ['Navigation']
 Following DOM Objects are available:
 - window.standardEventVarsObject
 - window.slashedURLObject
