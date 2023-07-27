@@ -83,6 +83,13 @@ module.exports = {
         "url": "www.css.ch?mail=me@bluewin.ch",
         "queryString": "mail=me@bluewin.ch"
       }
+    }, {
+      "modulePath": "css-standard-event-tracking/src/lib/actions/triggerCustomEvent.js",
+      "settings": {
+        "category": "Category",
+        "action": "Action",
+        "label": "Label"
+      }
     }]
   }, {
     "id": "RL1619007303545",
@@ -123,10 +130,14 @@ module.exports = {
   "company": {
     "orgId": "ABCDEFGHIJKLMNOPQRSTUVWX@AdobeOrg"
   },
+  "environment": {
+    "id": "EN00000000000000000000000000000000",
+    "stage": "development"
+  },
   "buildInfo": {
-    "turbineVersion": "27.2.0",
-    "turbineBuildDate": "2021-10-14T10:03:01.082Z",
-    "buildDate": "2021-10-14T10:03:01.082Z",
+    "turbineVersion": "27.2.1",
+    "turbineBuildDate": "2022-04-26T08:06:08.481Z",
+    "buildDate": "2022-04-26T08:06:08.481Z",
     "environment": "development"
   }
 }
