@@ -310,9 +310,70 @@ TrackingHelper.piiChecker = function(url,queryString){
 	localStorage.setItem(name, existing.toString());
 };
 
+	TrackingHelper.synchUserInfo = function() {
+	  
+	  // Get data from userinfo (!) cookie or create empty object
+	  var userinfo = CookieHelper.getCookie('userinfo');
+	  var userinfoObject = {};
+	  if (userinfo !== '') {
+		var userinfoArray = userinfo.split(',');
+		for (var i in userinfoArray) {
+		  var properties = userinfoArray[i].split(':');
+		  userinfoObject[properties[0]] = properties[1];
+		}
+	  }
+	  
+	  // Change userinfo data to match naming convention
+		// Change gender to f or m
+	  if (userinfoObject.gender) {
+		var gender = userinfoObject.gender;
+		if (gender ===  'm' || gender === 'male') {
+		  gender = 'm';
+		} else if (gender === 'f' || gender === 'female') {
+		  gender = 'f'
+		} else {
+		  gender = undefined
+		}
+	  }
+	  
+		// delete yearOfBirth property
+	  if (userinfoObject.yearOfBirth) {
+		delete userinfoObject.yearOfBirth
+	  }
+	
+	  // get data from userInfo (!) cookie or create empty object
+	  var userInfo = CookieHelper.getCookie('userInfo');
+	  var userInfoObject = userInfo !== '' ? JSON.parse(userInfo) : {};
+	
+	  // Get data from dataLayer or create empty object
+	  var dataLayer = digitalData.user.userInfo;
+	  var dataLayerObject = typeof(dataLayer) === 'object' ? JSON.parse(JSON.stringify(dataLayer)) : {};
+	
+	  //Delete undefined values from all objects
+	  var deleteUndefined = function (obj) {
+		if (Object.keys(obj).length !== 0) {
+		  for (var key of Object.keys(obj)) {
+			if (typeof(obj[key]) === 'undefined') {
+			  delete obj[key]
+			}
+		  }
+		}
+	  }
+	  deleteUndefined(userinfoObject);
+	  deleteUndefined(userInfoObject);
+	  deleteUndefined(dataLayerObject);
+	
+	  // Merge all info sources (dataLayer > userInfo > userinfo)
+	  var mergeObject = Object.assign({}, userinfoObject, userInfoObject, dataLayerObject);
   
-
-}
+	  // Update cookie if mergeObject is not empty (empty object equals 2 chars - {})
+	  var cookieString = JSON.stringify(mergeObject);
+	  var encodedCookieString = cookieString;
+	  if (cookieString.length > 2) {
+		CookieHelper.setCookie('userInfo', encodedCookieString, '365');
+	  }
+	}
+  }
 catch(e){
 	TrackingHelper.console('TMSFehler: ' + e)
 }
