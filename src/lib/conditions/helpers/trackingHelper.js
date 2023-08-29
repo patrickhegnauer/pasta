@@ -97,7 +97,7 @@ TrackingHelper.console = function(text){
 					TrackingHelper.console("[TrackingHelper.URLslasher] type of URL not given, URL not slashed into TMS variables");
 				}
 			} else {
-				TrackingHelper.console("[TrackingHelper.URLslasher] protocol of URL is not http, URL not slashed into TMS variables");
+				TrackingHelper.console("[TrackingHelper.URLslasher] protocol of URL is not https, URL not slashed into TMS variables");
 			}
 		} else {
 			TrackingHelper.console("[TrackingHelper.URLslasher] input URL is empty, nothing to slash into bits");
