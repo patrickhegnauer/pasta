@@ -312,7 +312,7 @@ TrackingHelper.piiChecker = function(url,queryString){
 
 	TrackingHelper.synchUserInfo = function() {
 	  
-	  // Get data from userinfo (!) cookie or create empty object
+	  //Get data from userinfo (!) cookie or create empty object
 	  var userinfo = CookieHelper.getCookie('userinfo');
 	  var userinfoObject = {};
 	  if (userinfo !== '') {

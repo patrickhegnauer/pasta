@@ -1,4 +1,6 @@
 # Release Notes
+## Rigatoni v2.0.12
+- Added a new function for syncing userInfo (synchUserInfo)
 ## Rigatoni v2.0.2 
 - Added Error Handling for QueryString Log, if QueryString is empty
 - Added DataLayer Push to GET Condition
