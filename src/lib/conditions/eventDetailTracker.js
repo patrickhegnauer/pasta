@@ -35,7 +35,7 @@ module.exports = function(settings,event) {
       }
   
       TrackingHelper.console(window.standardEventVarsObject)
-      TrackingHelper.dataLayerPush('detail');
+      //TrackingHelper.dataLayerPush('detail');
   
       return true;
 

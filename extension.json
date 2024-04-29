@@ -3,7 +3,7 @@
   "iconPath": "src/resources/icons/pasta_2_0.svg",
   "name": "css-standard-event-tracking",
   "platform": "web",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Track events based on the CSS Versicherung Standard. This extension will provide event tracking features as well as frequently used data elements. Documentation: https://github.com/patrickhegnauer/pasta",
   "author": {
     "name": "Patrick Hegnauer"
