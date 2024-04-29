@@ -236,12 +236,23 @@ TrackingHelper.console = function(text){
                     }
                 }
   }
+
+  else if(scope == 'detail'){
+	dataLayerEvent = {
+		eventInfo: {
+			category: window.standardEventVarsObject["event_attributes_category"],
+			action: window.standardEventVarsObject["event_attributes_action"]
+		},
+		attributes:{
+		  label: window.standardEventVarsObject["event_eventInfo_label"]
+					  }
+				  }
+	}
   	
 	window.digitalData = window.digitalData || {};
   	window.digitalData.event = window.digitalData.event || []
 
 	window.digitalData.event.push(dataLayerEvent);
-	TrackingHelper.console(dataLayerEvent)
 	
 };
 

@@ -34,8 +34,6 @@ module.exports = function(settings,event) {
           return false
         }
      }
-      
-
 
       //Return final vars in object
 		  window.standardEventVarsObject = {
@@ -57,7 +55,7 @@ module.exports = function(settings,event) {
     }
       
     catch(e){
-      TrackingHelper.console('TMS Fehler: ' + e)
+      TrackingHelper.console('[PASTA - GET] Fehler: ' + e)
       
     }
 };
