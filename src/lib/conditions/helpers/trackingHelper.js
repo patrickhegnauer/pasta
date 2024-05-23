@@ -213,7 +213,8 @@ TrackingHelper.console = function(text){
      dataLayerEvent = {
                     eventInfo: {
                         category: window.standardEventVarsObject["event_attributes_category"],
-                        action: window.standardEventVarsObject["event_attributes_action"]
+                        action: window.standardEventVarsObject["event_attributes_action"],
+						chain: window.standardEventVarsObject["event_eventInfo_chain"]
                     },
                     attributes:{
                       label: window.standardEventVarsObject["event_eventInfo_label"],

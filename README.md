@@ -10,6 +10,13 @@ This Adobe Launch private Extension provides several tracking features, based on
 
 This Extension provides Actions, Conditions, Data Elements and some Helper. 
 
+## Basic Behaviour
+Every Event should generate the following Event Objects
+- window.standardEventVarsObject
+- window.slashedURLObject
+
+These Objects and the assigned attributes should be used. For example in a XDM Object.
+
 ## Extension Config
 - Add the current application name provided by the digital analytics team.
 - Check if log should be provided in the browser console
@@ -39,6 +46,12 @@ This Action provides a console log (only in DEV/INT/VPR) with the current versio
 #### Usage:
 Add this Action to a Rule and add the current live domain. If there are multiple language based domains, you can also provide a data element.
 
+### Trigger Custom Event
+#### Description:
+This Action triggers the Custom Event "event-action-trigger".
+#### Usage:
+Add this Action to a Rule and fill out the necessary Data Elements.
+
 ## Conditions
 ### Global Event Tracker
 #### Description:
@@ -56,6 +69,14 @@ This Condition checks if an Anchor Element was clicked. It also checkes if the e
 - window.slashedURLObject
 #### Usage:
 Create an event tracking rules which listens (mousedown or click) on a, button elements. Add the condition and add some Actions (e.g. Set Variables from Adobe). 
+
+### Event Detail Tracker
+#### Description:
+This Condition checks if a Custom Event was triggered. This Condition will check the link and provide Event Variables for the specific link. Following DOM Objects are available:
+- window.standardEventVarsObject
+- window.slashedURLObject
+#### Usage:
+Create an event tracking rules which listens (mousedown or click) on custom events (e.g. "event-action-trigger"). Add the condition and add some Actions (e.g. Set Variables from Adobe). 
 
 ## Data Elements
 | Data Element  | Value |

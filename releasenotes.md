@@ -1,4 +1,7 @@
 # Release Notes
+## Rigatoni v2.1.6
+- Added Event Detail Condition
+- Standardisation of the Event Variables
 ## Rigatoni v2.0.12
 - Added a new function for syncing userInfo (synchUserInfo)
 ## Rigatoni v2.0.2 

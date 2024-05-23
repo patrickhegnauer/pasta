@@ -6,10 +6,7 @@ var window = require('@adobe/reactor-window');
 module.exports = function(settings,event) {
 
 try{
-  //clear event objects
-  window.standardEventVarsObject = {};
-  window.slashedURLObject = {};
-
+  
   // TODO Return whether the condition passes.
   var event_attributes_tgtURL = 'not-set';
   var extensionSettings = turbine.getExtensionSettings();
@@ -24,6 +21,10 @@ try{
 
   if(event.target.dataset.eventCategory === undefined && event.target.parentElement.dataset.eventCategory === undefined && event.target.parentElement.parentElement.dataset.eventCategory === undefined ){
   
+  //clear event objects
+  window.standardEventVarsObject = {};
+  window.slashedURLObject = {};
+
   //check Parent Nodes	
 	if (event.target !== "") {
     var parentNodeCounter = 0;
@@ -163,12 +164,13 @@ try{
             TrackingHelper.console("[PASTA-SET] Standard Event 'Mailto' values set");
 		}
   }
-
+    var chain = category + '|' + action + '|' + label;
     //Return final vars in object
 		window.standardEventVarsObject = {
 			"event_attributes_category": category,
 			"event_attributes_action": action,
-			"event_eventInfo_label": label
+			"event_eventInfo_label": label,
+      "event_eventInfo_chain":chain
 		};
 
     if(window.standardEventVarsObject["event_attributes_category"] == "not-set"){
@@ -204,7 +206,7 @@ else{
 
   return true
 
-  }
+}
   catch(e){
     TrackingHelper.console('TMSFehler: '+ e)
   }

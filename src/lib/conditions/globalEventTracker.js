@@ -25,6 +25,7 @@ module.exports = function(settings,event) {
         var category = event.element.getAttribute("data-event-category")
         var action = event.element.getAttribute("data-event-action")
         var label = event.element.getAttribute("data-event-label")
+        var chain = category + '|' + action + '|' + label;
 
       //new as of 2.0.5
       for (var i = 0; i < dataElement.length; i++) {
@@ -39,7 +40,8 @@ module.exports = function(settings,event) {
 		  window.standardEventVarsObject = {
 			"event_attributes_category": category,
 			"event_attributes_action": action,
-			"event_eventInfo_label": label
+			"event_eventInfo_label": label,
+      "event_eventInfo_chain":chain
 		}
 
     TrackingHelper.console(window.standardEventVarsObject)
