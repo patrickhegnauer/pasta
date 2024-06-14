@@ -6,7 +6,7 @@ module.exports = function(settings,event) {
   try{
    //clear event objects
    window.standardEventVarsObject = {};
-   window.slashedURLObject = {};
+   // window.slashedURLObject = {};
 
      TrackingHelper.console("===================>[PASTA - EDT] START");
      TrackingHelper.console("[PASTA - EDT] event call detected");
